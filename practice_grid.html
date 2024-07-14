@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice-grid</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            
+            display: grid;
+            width: 100%;
+            height: 100vh;
+            gap: 4px;
+            grid-template-areas: "hdr hdr sdr sdr"
+             "hdr hdr main ftr";
+        }
+        
+        #box-1{
+            grid-area: hdr;
+            background-color: rgb(214, 40, 69);
+        }
+        #box-2{
+            grid-area: sdr;
+            background-color: rgb(213, 135, 17);
+        }
+        #box-3{
+            grid-area: main;
+            background-color: purple;
+        }
+        #box-4{
+            grid-area: ftr;
+            background-color: rgb(58, 173, 58);
+        }
+        @media screen and (max-width:576px) {
+        .container{
+            grid-template-areas: "hdr"
+             "sdr"
+             "main"
+             "ftr";
+        }
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="box-1"></div>
+        <div class="box" id="box-2"></div>
+        <div class="box" id="box-3"></div>
+        <div class="box" id="box-4"></div>
+    </div>
+    </div>
+</body>
+</html>
